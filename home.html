@@ -1,0 +1,183 @@
+<div>
+  <!-- Modal -->
+  <button id="modal-btn" type="button" class="btn btn-primary home-modal-btn" data-bs-toggle="modal" data-bs-target="#model_1">
+    Launch
+  </button>
+
+  <div class="modal fade" id="model_1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="model_1_label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content normal-text">
+        <div class="modal-header">
+          <h5 class="modal-title fs-4 text-success" id="model_1_label">Welcome!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- <div class="modal-body">
+          ...
+        </div> -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Banner -->
+  <div class="container-fluid">
+    <div class="banner-container banner-1 mt-3">
+      <img class="rounded rounded-3" src="images/home-banner.jpg">
+      <div class="caption caption-large">
+        Your Journey to Creativity
+        <br>
+        starts here!
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container mt-5">
+    <!-- Remove container at small width-->
+    <div id="amdt-intro" class="text-center mt-4 fs-4 p-2">
+      AMDT is a creative learning community where
+      <br>
+      millions of individuals can join in to learn
+      <br>
+      from various teachers and educational resources
+    </div>
+
+    <div class=" mt-5">
+
+      <div class="row">
+        <div class="col text-center">
+          <img class="side-post" src="images/albert.jpg">
+        </div>
+
+        <div class="col text-center quote">
+          <p>
+            "Creativity is Intelligence having fun"
+            <br>
+            -Albert Einstein
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="row mt-5">
+        <div class="col text-center fs-4 normal-text">
+
+          AMDT is Srilanka's Creative Community who aim to
+          <br>
+          encourage various individuals in uplifting
+          <br>
+          their creative abilities
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+
+          <div id="slide-show-home" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#slide-show-home" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#slide-show-home" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#slide-show-home" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="images/amdt-courses_main.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/comp_study.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/study1.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slide-show-home" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slide-show-home" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center fs-4 normal-text">
+
+          <p>Today's society is a gold mine for creative people. Along with the developement and easy access to
+            technology,
+            many innovative people get to show off their creativity in various sectors. </p>
+
+          <p>As one of the leading Schools of Creativity in Srilanka, we aspire to offer the best for many innovative
+            individuals
+            across the country.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col text-center quote">
+          <p>
+            "You can't use up creativity, the more you use the more you have"
+            <br>
+            -Maya Angelou
+          </p>
+        </div>
+
+        <div class="col text-center">
+          <img class="side-post" src="images/maya_angelou.jpg">
+        </div>
+      </div>
+
+      <div class="row mt-1">
+        <div class="col text-center">
+          <img class="img-fluid" src="images/amdt-new.png">
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+  document.title = 'Homepage | AMDT';
+
+  function welcome_alert() {
+    $(".home-modal-btn").click();
+  }
+
+  setTimeout(function () { welcome_alert(); }, 5000);
+
+
+
+
+
+</script>

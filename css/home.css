@@ -1,0 +1,300 @@
+/* Home page */
+
+#home-body {
+  /* background-image: url("../images/239875659_10159207645905056_8733484474543153870_n.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  /* background-color: gainsboro; */
+  background-color: white;
+}
+
+/* .amdt-banner {
+    width: 40%;
+} */
+
+/* .amdt-banner {
+    margin-top: 50px;
+    float: right;
+    margin-left: -100px;
+} */
+
+.msg-banner {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+#modal-btn {
+    display: none;
+}
+
+/* Video css */
+.banner-container {
+    
+    /* width: 300px; */
+    position: relative;
+}
+
+.banner-1 {
+  height: 600px;
+  
+
+}
+
+/* .banner-1 video, .banner-1 img {
+  filter: blur(1px);
+
+} */
+
+.banner-2 {
+  height: 250px;
+  
+}
+
+.banner-2 video, .banner-2 img {
+  filter: blur(0.5px);
+
+}
+
+.banner-3 {
+  height: 400px;
+
+}
+
+.banner-container video, .banner-container img {
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: fill; */
+    /* -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px); */
+    
+}
+
+.banner-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-family: sniglet;
+  color: aliceblue;
+  padding: 2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.caption-large {
+  top: 20%;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.caption-small {
+  top: 25%;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+
+/* banner media queries */
+
+@media screen and (max-width: 850px) {
+  .caption-large {
+    top: 19%;
+    font-size: 75px;
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+  .caption-large {
+    font-size: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 640px) {
+  .caption-large {
+    font-size: 45px;
+  }
+
+  .caption-small {
+    font-size: 70px;
+  }
+  
+}
+
+@media screen and (max-width: 350px) {
+  .caption-large {
+    top: 18%;
+  }
+
+  .caption-small {
+    font-size: 60px;
+  }
+  
+}
+
+@media screen and (max-width: 327px) {
+  .caption-large {
+    top: 14%;
+    font-size: 38px;
+  }
+
+  .caption-small {
+    font-size: 55px;
+
+  }
+  
+}
+
+@media screen and (max-width: 280px) {
+  .caption-large {
+    font-size: 32px;
+  }
+
+
+  .caption-small {
+    font-size: 45px;
+  }
+  
+}
+
+/* bottom part of website */
+
+#amdt-intro {
+  font-family: sniglet;
+}
+
+.side-post {
+  width: 60%;
+}
+
+.quote {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 200;
+  
+}
+
+/* Quote media queries */
+
+@media screen and (max-width: 1000px) {
+  .quote {
+    font-size: 40px;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .quote {
+    font-size: 30px;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .quote {
+    font-size: 25px;
+  }
+
+  .side-post {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 355px) {
+  .quote {
+    font-size: 20px;
+  }
+ 
+}
+
+/* Normal text */
+
+.normal-text {
+  font-family: sniglet;
+  font-weight: 200;
+  /* width: 200px; */
+}
+
+.carousel-item {
+  height: 100%;
+  text-align: center;
+}
+
+/* .sidebar-text {
+  font-family: sniglet;
+  font-weight: 200;
+
+} */
+
+.art_image {
+  cursor: pointer;
+  transition: transform 1200ms;
+  
+}
+
+.art_image:hover {
+  transform: scale(108%);
+
+}
+
+.form_heading {
+  font-weight: 800;
+  font-size: 60px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .form_heading {
+    font-size: 55px;
+    -webkit-text-stroke-width: 3px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .form_heading {
+    font-size: 48px;
+    -webkit-text-stroke-width: 3px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  .form_heading {
+    font-size: 38px;
+    -webkit-text-stroke-width: 3px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  .form_heading {
+    font-size: 33px;
+    -webkit-text-stroke-width: 2px;
+    
+  }
+  
+}
+
+#contact_box {
+  height: 100px;
+}
+
+
+
+

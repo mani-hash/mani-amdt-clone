@@ -1,0 +1,680 @@
+<div>
+    <div class="container-fluid">
+        <div class="banner-container banner-2 mt-3">
+            <img class="rounded rounded-3" src="images/exam.jpg">
+            <div class="caption caption-small">
+                Quiz
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <button id="modal-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#model_2">
+        Launch
+    </button>
+
+    <div class="modal fade" id="model_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="model_2_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="model_2_label"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex mt-5" id="wrapper">
+
+
+        <div class="border-end bg-white normal-text" id="sidebar-wrapper">
+            <div class="sidebar-heading border bg-light">AMDT Quiz menu</div>
+            <div class="list-group list-group-flush">
+                <a id="main_menu" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> Main Menu</a>
+                <a id="question_1" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> Question 1</a>
+                <a id="question_2" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 2 </a>
+                <a id="question_3" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 3</a>
+                <a id="question_4" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 4</a>
+                <a id="question_5" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 5</a>
+                <a id="question_6" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 6</a>
+                <a id="question_7" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 7</a>
+                <a id="question_8" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 8</a>
+                <a id="question_9" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 9</a>
+                <a id="question_10" class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="javascript:void(0)"> <img class='mb-1 locked' src='images/lock-fill.svg'> Question 10</a>
+            </div>
+        </div>
+
+
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-dark" id="sidebarToggle"> &#9776; Menu</button>
+                    <div class="d-flex flex-wrap flex-column p-2 mx-4 normal-text">
+                        <div class="order-1 flex-fill">Answered: <span id="answered">0</span></div>
+                        <div class="order-2 flex-fill">Points: <span id="points">N/A</span></div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Bootstrap
+                  </a>
+                </div>
+              </nav> -->
+
+
+            <div id="main_menu_content" class="container-fluid normal-text sidebar-content">
+                <div class="container">
+                    <h1 class="mt-5 text-center">AMDT Quiz</h1>
+                </div>
+                <div class="mt-5 text-center fs-4 container">
+                    <p>Try our quiz to test your knowledge about AMDT's history.</p>
+
+                    <p>There are 10 Multiple Choice questions. For every right answer, you will be awarded 2
+                        points! For wrong answers, you will get -1 point.</p>
+
+                    <p>Total score is 20. You can reset the score by pressing the reset button.
+                        <br>
+                        Click on Start Quiz to start answering the questions.
+                    </p>
+                </div>
+                <div class="mt-5 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="start-quiz" class="btn btn-outline-success fs-3">Start</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="reset_quiz" class="btn btn-outline-danger fs-3">Reset</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 1 -->
+
+
+            <div id="question_1_content" class="container-fluid sidebar-content normal-text">
+
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 1</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year did Mutt start?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q1" id="q1_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q1_radio1">1</label>
+                            <span class="p-2">2003</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q1" id="q1_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q1_radio2">2</label>
+                            <span class="p-2">2006</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q1" id="q1_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q1_radio3">3</label>
+                            <span class="p-2">2005</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q1" id="q1_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q1_radio4">4</label>
+                            <span class="p-2">2004</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+
+            <div id="question_2_content" class="container-fluid sidebar-content normal-text">
+
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 2</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        What is the full description of AMDT?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q2" id="q2_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q2_radio1">1</label>
+                            <span class="p-2">Academy of Mastering Digital Technology</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q2" id="q2_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q2_radio2">2</label>
+                            <span class="p-2">Academy of Multimedia and Technology</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q2" id="q2_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q2_radio3">3</label>
+                            <span class="p-2">Academy of Medicine and Technology</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q2" id="q2_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q2_radio4">4</label>
+                            <span class="p-2">American Multimedia Tech Company</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Question 3 -->
+
+            <div id="question_3_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 3</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last graduation held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q3" id="q3_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q3_radio1">1</label>
+                            <span class="p-2">2018</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q3" id="q3_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q3_radio2">2</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q3" id="q3_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q3_radio3">3</label>
+                            <span class="p-2">2017</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q3" id="q3_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q3_radio4">4</label>
+                            <span class="p-2">2014</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Question 4 -->
+
+            <div id="question_4_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 4</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last AMDT Breast Cancer held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q4" id="q4_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q4_radio1">1</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q4" id="q4_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q4_radio2">2</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q4" id="q4_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q4_radio3">3</label>
+                            <span class="p-2">2017</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q4" id="q4_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q4_radio4">4</label>
+                            <span class="p-2">2018</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+
+            <div id="question_5_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 5</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        What is the address of AMDT?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q5" id="q5_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q5_radio1">1</label>
+                            <span class="p-2">168/2, St Micheal Road, Colombo-02</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q5" id="q5_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q5_radio2">2</label>
+                            <span class="p-2">148, 1/4, Aluthmavatha Rd, Colombo-15</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q5" id="q5_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q5_radio3">3</label>
+                            <span class="p-2">14B, Kollupitiya, Colombo-03</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q5" id="q5_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q5_radio4">4</label>
+                            <span class="p-2">317A, Galle Road, Colombo-04</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+
+            <div id="question_6_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 6</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        Who are the head teachers of AMDT?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q6" id="q6_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q6_radio1">1</label>
+                            <span class="p-2">Kavindu Bandara</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q6" id="q6_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q6_radio2">2</label>
+                            <span class="p-2">Hansaja Kithmal Damsara</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q6" id="q6_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q6_radio3">3</label>
+                            <span class="p-2">Satheesh Vinodhi Jayawardena</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q6" id="q6_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q6_radio4">4</label>
+                            <span class="p-2">Kenul Fernando</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+
+            <div id="question_7_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 7</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last AMDT APL held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q7" id="q7_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q7_radio1">1</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q7" id="q7_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q7_radio2">2</label>
+                            <span class="p-2">2020</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q7" id="q7_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q7_radio3">3</label>
+                            <span class="p-2">2018</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q7" id="q7_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q7_radio4">4</label>
+                            <span class="p-2">2019</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+
+            <div id="question_8_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 8</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last AMDT Earth Hour held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q8" id="q8_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q8_radio1">1</label>
+                            <span class="p-2">2018</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q8" id="q8_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q8_radio2">2</label>
+                            <span class="p-2">2020</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q8" id="q8_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q8_radio3">3</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q8" id="q8_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q8_radio4">4</label>
+                            <span class="p-2">2019</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+
+            <div id="question_9_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 9</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last AMDT Showcase held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q9" id="q9_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q9_radio1">1</label>
+                            <span class="p-2">2020</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q9" id="q9_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q9_radio2">2</label>
+                            <span class="p-2">2017</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q9" id="q9_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q9_radio3">3</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q9" id="q9_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q9_radio4">4</label>
+                            <span class="p-2">2019</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+
+            <div id="question_10_content" class="container-fluid sidebar-content normal-text">
+                <div class="container">
+                    <h1 class="mt-5 text-center">Question 10</h1>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <div class="fs-4 text-center">
+                        In what year was the last AMDT Avurudu held?
+                    </div>
+                    <div class="container-fluid mt-5 d-flex flex-wrap justify-content-evenly fs-5">
+
+                        <div class="form-check order-1 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q10" id="q10_radio1"
+                                value="option1">
+                            <label class="form-check-label btn btn-outline-dark" for="q10_radio1">1</label>
+                            <span class="p-2">2016</span>
+                        </div>
+
+                        <div class="form-check order-2 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q10" id="q10_radio2"
+                                value="option2">
+                            <label class="form-check-label btn btn-outline-dark" for="q10_radio2">2</label>
+                            <span class="p-2">2017</span>
+                        </div>
+
+                        <div class="form-check order-3 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q10" id="q10_radio3"
+                                value="option3">
+                            <label class="form-check-label btn btn-outline-dark" for="q10_radio3">3</label>
+                            <span class="p-2">2020</span>
+                        </div>
+
+                        <div class="form-check order-4 p-4">
+                            <input class="form-check-input btn-check" type="radio" name="q10" id="q10_radio4"
+                                value="option4">
+                            <label class="form-check-label btn btn-outline-dark" for="q10_radio4">4</label>
+                            <span class="p-2">2019</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 container-fluid flex-wrap  d-flex">
+                    <div class="order-1 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-dark fs-3 bmit">Back</button>
+                    </div>
+                    <div class="order-2 flex-fill text-center p-4">
+                        <button id="" class="btn btn-outline-success fs-3 sbmit">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+<script src="js/quiz.js"></script>

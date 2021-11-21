@@ -1,0 +1,288 @@
+<div>
+    <div class="container-fluid">
+
+        <button id="modal-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#model_3">
+            Launch
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="model_3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="model_3_label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content normal-text">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="model_3_label">Form Submission!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal-text container fluid mt-5">
+            <div>
+                <div class="container card mb-3" style="max-width: 100%;">
+                    <h5 class="card-title mt-4 mb-4 text-center text-white form_heading">Contact Us</h5>
+                    <div class="row g-0">
+                        <div class="col-md-4 p-2">
+                            <img id="form_banner" src="images/contact_us2.jpg" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8">
+
+                            <div class="card-body fs-6">
+
+
+                                <form class="mt-5 p-3">
+                                    <div id="email_err" class="text-danger"></div>
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                            placeholder="name@example">
+                                        <label for="email" class="form-label">Email address</label>
+
+                                    </div>
+                                    <div id="emailHelp" class="form-text mb-3">We'll never share your email with anyone
+                                        else.
+                                    </div>
+
+                                    <div id="name_err" class="text-danger"></div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="user_name" placeholder="pass">
+                                        <label for="user_name" class="form-label">Name</label>
+                                    </div>
+
+                                    <div>Purpose:</div>
+                                    <div id="purpose_err" class="text-danger"></div>
+
+                                    <div class="input-group mb-3">
+
+                                        <select id="drop_menu_purpose" class="form-select" id="inputGroupSelect04"
+                                            aria-label="Example select with button addon">
+                                            <option value="0" selected>Not specified</option>
+                                            <option value="complaint">Regarding a complaint</option>
+                                            <option value="bug fix">I have found a bug!</option>
+                                            <option value="business">Business purposes</option>
+                                            <option value="other">Other</option>
+
+                                        </select>
+
+                                    </div>
+
+                                    <div id="contact_err" class="text-danger"></div>
+                                    <div class="mb-3 form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here"
+                                            id="contact_box"></textarea>
+                                        <label for="contact_box" class="form-label">Type here</label>
+                                    </div>
+
+                                    <div>Gender: </div>
+                                    <div id="gender_err" class="text-danger"></div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" class="form-check-input order-1"
+                                                id="radio_check1" value="male">
+                                            <label class="form-check-label" for="radio_check1">Male</label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" class="form-check-input order-2"
+                                                id="radio_check2" value="female">
+                                            <label class="form-check-label" for="radio_check2">Female</label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" class="form-check-input order-3"
+                                                id="radio_check3" value="other">
+                                            <label class="form-check-label" for="radio_check3">Other</label>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="name_check">
+                                        <label class="form-check-label" for="name_check">Show Name</label>
+                                    </div>
+                                    <button onclick="validateForm()" type="button"
+                                        class="btn btn-primary fs-4 mt-3">Submit</button>
+                                </form>
+
+
+                                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.title = 'Contact Us | AMDT'
+
+    function validateForm() {
+        var email = document.getElementById("email");
+        var username = document.getElementById("user_name");
+        var purpose = document.getElementById("drop_menu_purpose");
+        var contact_box = document.getElementById("contact_box");
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var nameCheck = document.querySelector('input[id="name_check"]:checked');
+
+        var valid_format = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        var final_message = "";
+
+        var valid_points = 0;
+
+        if (email.value == "") {
+            $("#email_err").html("&#x26A0; Email field cannot be empty")
+
+        } else {
+
+            if (email.value.match(valid_format)) {
+                $("#email_err").html("");
+                valid_points += 1;
+            } else {
+                $("#email_err").html("&#x26A0; Invalid Email");
+            }
+
+        }
+
+        if (username.value == "") {
+            $("#name_err").html("&#x26A0; Name field cannot be empty");
+
+
+        } else {
+            $("#name_err").html("");
+            valid_points += 1;
+        }
+
+        if (purpose.value == "0") {
+            $("#purpose_err").html("&#x26A0; Please specify a purpose");
+
+        } else {
+            $("#purpose_err").html("");
+            valid_points += 1;
+        }
+
+        if (contact_box.value.trim() == "") {
+            $("#contact_err").html("&#x26A0; This field cannot be empty");
+
+        } else {
+            if (contact_box.value.length > 500) {
+                $("#contact_err").html("&#x26A0; Character limit is 500");
+
+            } else {
+                $("#contact_err").html("");
+                valid_points += 1;
+
+            }
+
+        }
+
+        if (gender === null) {
+            $("#gender_err").html("&#x26A0; Please specify a gender");
+
+        } else {
+            $("#gender_err").html("");
+            valid_points += 1;
+
+        }
+
+        if (valid_points == 5) {
+            final_message += "<p>Dear " + username.value + ",</p>";
+            final_message += "<p>Your email address is " + email.value + ". ";
+
+            if (purpose.value == "other") {
+                final_message += "You haven't explicitly mentioned the purpose of your message by selecting '" + purpose.value + "'.</p>"
+
+            } else {
+                final_message += "You have selected '" + purpose.value + "' as the purpose of your message.</p>";
+            }
+
+            if (gender.value == "other") {
+                final_message += "<p>You haven't specified a gender by selecting '" + gender.value + "'. ";
+
+            } else {
+                final_message += "<p>Your gender is " + gender.value + ". ";
+            }
+
+            if (nameCheck === null) {
+                final_message += "You have chosen your name to be hidden</p>";
+
+            } else {
+                final_message += "You have chosen your name to be visible</p>";
+
+            }
+
+            final_message += "Your text message is: <br> <p>" + contact_box.value + "</p>";
+
+            $(".modal-body").html(final_message);
+
+
+
+            $("#modal-btn").click()
+        }
+
+        document.getElementsByClassName("form_heading")[0].scrollIntoView();
+
+
+
+
+    }
+
+    function card_pic_resize() {
+        if (screen.width > 991) {
+            $("#form_banner").attr("src", "images/contact_us_1.jpg");
+
+        } else if (screen.width <= 767) {
+            $("#form_banner").attr("src", "images/contact_us.jpg");
+
+
+        } else if (screen.width <= 991) {
+            $("#form_banner").attr("src", "images/contact_us_3.jpg");
+
+        }
+    }
+
+    $("#email").keyup(function () {
+        $("#email_err").html("");
+    });
+
+    $("#user_name").keyup(function () {
+        $("#name_err").html("");
+    });
+
+    $("#drop_menu_purpose").click(function () {
+        $("#purpose_err").html("");
+    });
+
+    $("#contact_box").keyup(function () {
+        $("#contact_err").html("");
+    });
+
+    $("input[name='gender']").change(function () {
+        $("#gender_err").html("");
+    });
+
+    $(window).resize(function () {
+        card_pic_resize();
+
+    });
+
+    card_pic_resize();
+
+
+</script>

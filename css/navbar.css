@@ -1,0 +1,66 @@
+/* @import url('../fonts/css2.css'); */
+
+#main_nav {
+    /* background-color:#6b2161; */
+    border-radius: 2px;
+    box-shadow: 0px 1px 10px #999;
+}
+
+#nav_logo {
+    height: 80px;
+    width: 100px;
+}
+
+.top-nav {
+    display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.top-nav:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: orange;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.top-nav:hover:after {
+   /* text-decoration: underline; 
+   text-decoration-color: orange;
+   text-underline-offset: 5px; */
+   transform: scaleX(1);
+   transform-origin: bottom left;
+   
+}
+
+@media screen and (max-width: 991px) {
+    .top-nav:after {
+        width: 0;
+    }
+
+    #dorm1:after {
+        width: 44px;
+    }
+
+    #dorm2:after {
+        width: 84px;
+    }
+    
+    #dorm3:after {
+        width: 128px;
+    }
+
+    #dorm4:after {
+        width: 146px;
+    }
+
+    #dorm5:after {
+        width: 80px;
+    }
+}
