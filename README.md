@@ -1,6 +1,6 @@
 # mani-amdt-clone
 
-Small sample project of a small assignment
+Small sample project of an assignment
 
 Feel free to use the code
 
