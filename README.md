@@ -1,6 +1,6 @@
 # mani-amdt-clone
 
-Project for [Amdt website](https://www.amdt.lk) 
+Small sample project of a small assignment
 
 Feel free to use the code
 
